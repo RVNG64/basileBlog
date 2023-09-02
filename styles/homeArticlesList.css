@@ -1,0 +1,128 @@
+.articleList__title {
+  font-size: 3.6rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.articleList__subtitle {
+  font-size: 1.4rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+  .articleCard {
+    flex-basis: calc(50% - 30px); /* 50% de la largeur du conteneur moins la marge */
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  .articleCard-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform .3s ease-in-out;
+  }
+
+  .articleCard-container:hover {
+    transform: scale(1.02);
+  }
+
+  .articlesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5rem;
+  }
+
+  .articleCard-imageContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .articleCard-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .articleCard-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+  }
+
+  .articleCard-container:hover .articleCard-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .articleCard-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 1;
+  }
+
+  .articleCard-tag {
+    background-color: purple;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .articleCard-title {
+    font-size: 1.5em;
+  }
+
+  .articleCard-summary {
+    font-size: 1em;
+  }
+
+  .articleCard-authorDate {
+    font-size: 12px;
+  }
+
+  .articleCard-admin {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px;
+  }
+
+  .articleCard-deleteBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .articleCard-deleteBtn:hover {
+    background-color: darkred;
+  }

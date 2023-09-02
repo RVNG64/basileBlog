@@ -15,6 +15,11 @@ const articleSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  theme: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   tags: [{
     type: String,
     trim: true,
@@ -31,6 +36,10 @@ const articleSchema = new mongoose.Schema({
     required: true,
     trim: true,
     unique: true,
+  },
+  image: {
+    type: String,
+    trim: true,
   },
 });
 

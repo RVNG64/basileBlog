@@ -1,69 +1,54 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import HeaderHome from '../components/HeaderHome';
-import { useSession, signIn, signOut } from 'next-auth/react'
+import { articleList } from './articles/articleList/articleList';
+import styles from '../styles/homeArticlesList.module.css';
 
-const ArticleCard = ({ article, onDelete }) => {
-  const { data: session } = useSession()
-
-  console.log(article.slug);
+const ArticleCard = ({ article }) => {
 
   return (
     <div className="articleCard">
-      {article && article.slug ? (
-        <Link href={`/articles/${article.slug}`}>
-          <h3>{article.title}</h3>
-          <p>{article.content}</p>
-        </Link>
-      ) : (
-        <p>Chargement...</p>
-      )}
-      {session && (
-        <div>
-          <button onClick={() => onDelete(article._id)}>Supprimer</button>
-        </div>
-      )}
+      <div className="articleCard-container">
+
+        {article && article.slug ? (
+          <Link href={`/articles/${article.slug}`}>
+            <div className="articleCard-content">
+              <span className="articleCard-tag">{article.theme}</span>
+              <h3 className="articleCard-title">{article.title}</h3>
+              <p className="articleCard-summary">{article.summary}</p>
+              <span className="articleCard-authorDate">{`${article.author} - ${article.createdAt}`}</span>
+            </div>
+            <div className="articleCard-imageContainer">
+              <div className="articleCard-overlay"></div>
+              <img src={article.image} alt="Image de l'article" className="articleCard-image"/>
+            </div>
+          </Link>
+        ) : (
+          <p>Chargement...</p>
+        )}
+      </div>
     </div>
   );
 };
 
 const Blog = () => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const [author, setAuthor] = useState('');
-  const [tags, setTags] = useState('');
-  const [articles, setArticles] = useState([]);
-  const [editingId, setEditingId] = useState(null);
-  const { data: session } = useSession()
+  const convertDateToJSFormat = (dateStr) => {
+    const [day, month, year] = dateStr.split('/');
+    return new Date(`${year}-${month}-${day}`).getTime();
+  };
 
+  const sortedArticleList = [...articleList].sort((a, b) => convertDateToJSFormat(b.createdAt) - convertDateToJSFormat(a.createdAt));
+
+/*
   function Admin() {
 
     if (session) {
       return (
         <>
-          {/* Votre interface d'administration */}
           <button onClick={() => signOut()}>Se déconnecter</button>
         </>
       )
     }
-
-    if (!session) {
-      return (
-        <div>
-          <h1>Non autorisé</h1>
-          <button onClick={() => signIn('credentials')}>Se connecter</button>
-        </div>
-      )
-    }
-
-    return (
-      <button onClick={() => signIn('credentials')}>Se connecter</button>
-    )
-  }
-
-  function generateSlug(title) {
-    return title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-_]/g, '');
   }
 
   useEffect(() => {
@@ -74,22 +59,6 @@ const Blog = () => {
     const res = await axios.get('/api/getArticles');
     console.log(res.data.data);
     setArticles(res.data.data);
-  };
-
-  const handleAddArticle = async (e) => {
-    e.preventDefault();
-    const slug = generateSlug(title);
-    const article = { title, slug, content, author, tags: tags.split(',') };
-    const res = await axios.post('/api/addArticles', article);
-    if (res.data.success) {
-      fetchArticles();
-      setTitle('');
-      setContent('');
-      setAuthor('');
-      setTags('');
-    } else {
-      console.error('Erreur lors de l\'ajout de l\'article');
-    }
   };
 
   const handleDeleteArticle = async (id) => {
@@ -108,45 +77,25 @@ const Blog = () => {
       console.error(`Erreur lors de la suppression de l'article: ${error}`);
     }
   };
+  */
 
   return (
     <div>
-      {session && (
-        <div>
-          <h2>Ajouter un article</h2>
-          <Admin />
-          <form onSubmit={handleAddArticle}>
-            <label>
-              Titre :
-              <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-            </label>
-            <label>
-              Auteur :
-              <input type="text" value={author} onChange={(e) => setAuthor(e.target.value)} />
-            </label>
-            <label>
-              Tags :
-              <input type="text" value={tags} onChange={(e) => setTags(e.target.value)} />
-            </label>
-            <label>
-              Contenu :
-              <textarea value={content} onChange={(e) => setContent(e.target.value)} />
-            </label>
-            <button type="submit">Ajouter</button>
-          </form>
-        </div>
-      )}
-
       <div>
         <HeaderHome />
-        <h1>Blog de Basile... & compagnie !</h1>
-        {articles.map((article, index) => (
-          <ArticleCard
-            key={index}
-            article={article}
-            onDelete={handleDeleteArticle}
-          />
-        ))}
+
+          <h1 className='articleList__title'>Blog de Basile... & ses amis !</h1>
+          <p className='articleList__subtitle'>Histoires, découvertes, rencontres et partages d'expériences au fil de l'aventure entrepreneuriale</p>
+
+          <div className="articlesContainer">
+            {sortedArticleList.map((article, index) => (
+              <ArticleCard
+                key={index}
+                article={article}
+              />
+            ))}
+          </div>
+
       </div>
     </div>
   );

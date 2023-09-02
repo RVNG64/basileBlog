@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import HeaderHome from '../components/HeaderHome';
+import NewsletterSignup from '../components/NewsletterSignup';
 import { articleList } from './articles/articleList/articleList';
 import styles from '../styles/homeArticlesList.module.css';
 
@@ -84,8 +85,8 @@ const Blog = () => {
       <div>
         <HeaderHome />
 
-          <h1 className='articleList__title'>Blog de Basile... & ses amis !</h1>
-          <p className='articleList__subtitle'>Histoires, découvertes, rencontres et partages d'expériences au fil de l'aventure entrepreneuriale</p>
+          <h1 className='articleList__title'>Blog de Basile</h1>
+          <p className='articleList__subtitle'>Histoires, découvertes, rencontres et partages d'expériences au fil d'aventures entrepreneuriales</p>
 
           <div className="articlesContainer">
             {sortedArticleList.map((article, index) => (

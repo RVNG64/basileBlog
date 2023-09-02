@@ -1,0 +1,76 @@
+/* Container principal */
+.newsletterSignup-container {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 3rem;
+  margin: 3rem auto 2rem;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+.newsletterSignup-container h3 {
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* Input e-mail */
+.newsletterSignup-container input {
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  margin: 1rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.newsletterSignup-container input:focus {
+  box-shadow: 0 0 0 2px #007BFF;
+}
+
+/* Bouton */
+.newsletterSignup-container button {
+  background: linear-gradient(135deg, #6EE7B7, #3FA7D6);
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.newsletterSignup-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Messages de confirmation et d'erreur */
+.newsL__confirmation-message, .newsL__error-message {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  color: white;
+  transition: all 0.5s ease;
+  opacity: 0;
+  animation: appear 1s forwards 1s;
+}
+
+.newsL__confirmation-message {
+  background-color: #6EE7B7;
+}
+
+.newsL__error-message {
+  background-color: #FF6B6B;
+}
+
+/* Animation pour faire apparaître le message */
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}

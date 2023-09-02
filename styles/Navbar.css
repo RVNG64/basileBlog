@@ -13,6 +13,10 @@
   align-items: center;
 }
 
+.basileNavbarCenter {
+  position: relative;
+}
+
 .basileNavbarLeft h1 {
   font-size: 1.5rem;
 }
@@ -31,8 +35,26 @@
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  margin-left: 1rem;
   color: white;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;  /* Ajout d'un bord arrondi */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basileNavbarSearchButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+.basileNavbarSearchButton.active {
+  background-color: rgba(0, 123, 255, 0.2);
+  color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
 }
 
 .basileNavbarSearchInput {
@@ -44,10 +66,11 @@
   transition: width 0.5s ease, border-color 0.5s ease;
   outline: none;
   padding: 0;
+  border-radius: 15px;
 }
 
 .basileNavbarSearchInput::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .basileNavbarSearchInput.active,
@@ -120,4 +143,36 @@
   100% {
     background-position: 0% 50%;
   }
+}
+
+.searchDropdownContainer {
+  position: relative;
+  width: 100%;
+}
+
+.searchDropdownContainer:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.searchDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 400px;
+  overflow-y: auto;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.searchDropdown div {
+  padding: 10px;
+}
+
+.searchDropdown div:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
 }

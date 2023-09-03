@@ -1,0 +1,248 @@
+.Basile__articleDetailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 3rem 1rem 3rem;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.Basile__articleDetailContainer:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Basile__articleHeader {
+  position: relative;
+  padding: 5rem;
+  width: 800px;
+  height: 300px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
+}
+
+.Basile__articleImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.Basile__articleImage:hover {
+  transform: scale(1.03);
+}
+
+.Basile__articleContent {
+  position: relative;
+  width: 800px;
+  padding: 2rem 5rem;
+  background: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Basile__articleTitle {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.Basile__articleText {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #555;
+  text-align: justify;
+}
+
+/* Meta */
+.Basile__articleMeta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.Basile__articleMeta p {
+  margin: 5px 10px;
+}
+
+/* Bouton de retour */
+.Basile__goBackButton {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e4e4e4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Basile__goBackButton:hover {
+  background-color: #eee;
+}
+
+/* Thème de l'article */
+.Basile__articleTheme {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 0.9rem;
+  padding: 8px;
+  font-weight: 500;
+  color: #fff;
+  background-color: rgb(158, 2, 158);
+  border-radius: 4px;
+}
+
+/* Styles généraux pour tous les boutons de partage */
+.Basile__shareButton {
+  padding: 12px 24px;
+  margin: 0.5rem;
+  font-size: 18px;
+  background-color: #4aa1ff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Basile__shareButton:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour la fenêtre modale */
+.Basile__share-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.Basile__share-modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Basile__share-modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+/* Animation d'ouverture */
+.Basile__share-modal.open .Basile__share-modal-content {
+  animation: slide-up 0.3s ease-out;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Boutons stylisés dans la fenêtre modale */
+.Basile__share-modal button {
+  margin: 0.5rem;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px; /* Bords très arrondis pour un style moderne */
+  background: linear-gradient(45deg, #6ab7ff, #4a90e2);
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.Basile__share-modal button:hover {
+  background: linear-gradient(45deg, #4a90e2, #357ABD);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Basile__share-modal button:active {
+  transform: scale(0.97);
+}
+
+.Basile__socialLogo {
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.Basile__socialLogo:hover {
+  color: #007bff;
+}
+
+.share-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.Basile__copied-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 32px;
+  background-color: #44c767; /* Vert */
+  color: #ffffff; /* Blanc */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.Basile__copied-alert.show {
+  opacity: 1;
+  visibility: visible;
+}

@@ -10,6 +10,8 @@ import '../styles/homeArticlesList.css';
 import '../styles/testCTAHome.css';
 import '../styles/footer.css';
 import '../styles/newsletterSignup.css';
+import '../styles/articles/articlesCss.css';
+import '../styles/articles/suggestedArticles.css';
 
 function MyApp({ Component, pageProps }) {
   return (

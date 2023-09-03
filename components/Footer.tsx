@@ -19,9 +19,6 @@ export default function Footer() {
         >
           <h2 className="footer__logo">Basile</h2>
         </a>
-        <p>
-          © WEVO 2023 - Tous droits réservés <br />
-        </p>
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -29,6 +26,9 @@ export default function Footer() {
         >
           Mentions légales
         </a>
+        <p>
+          © WEVO 2023 - Tous droits réservés <br />
+        </p>
       </div>
 
       <div className="footer-right">

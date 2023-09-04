@@ -30,13 +30,13 @@ export const articleList = [
     createdAt: '03/09/2023'
   },
   {
-    title: 'L\'introspection, ou l\'art de se poser les bonnes questions',
-    slug: '4-le-miroir-introspection-art-de-se-poser-les-bonnes-questions',
+    title: 'Surmonter la peur de se lancer quand on souhaite entreprendre',
+    slug: '4-surmonter-la-peur-de-se-lancer-quand-on-souhaite-entreprendre',
     author: 'Basile',
     theme: 'Développement personnel',
-    tags: ['entrepreneur', 'introspection', 'développement personnel', 'analyse', 'réflexion'],
+    tags: ['entrepreneur', 'introspection', 'développement personnel', 'analyse', 'réflexion', 'peur', 'se lancer', 'entreprendre'],
     image: 'https://res.cloudinary.com/dvzsvgucq/image/upload/v1690489096/hervemake_An_entrepreneur_sits_alone_in_a_serene_natural_settin_06483e8b-63b3-4715-a01b-9720c9a937d6_sebxnf.png',
-    summary: 'Pour un entrepreneur, il est vital de savoir se remettre en question. Mais comment faire pour se poser les bonnes questions ?',
+    summary: 'La peur de se lancer est un sentiment que partagent de nombreux futurs entrepreneurs. Comment la surmonter ?',
     createdAt: '04/09/2023'
   },
 ];

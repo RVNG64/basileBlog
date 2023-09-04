@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { articleList } from '../pages/articles/articleList/articleList';
+import { articleList } from './articles/articleList';
 import styles from '../styles/Navbar.module.css';
 
 export default function Navbar() {

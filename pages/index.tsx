@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import HeaderHome from '../components/HeaderHome';
 import NewsletterSignup from '../components/NewsletterSignup';
-import { articleList } from './articles/articleList/articleList';
+import { articleList } from '../components/articles/articleList';
 import styles from '../styles/homeArticlesList.module.css';
 
 const ArticleCard = ({ article }) => {

@@ -10,6 +10,12 @@ export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
   const navbarRef = useRef(null);
 
+  const resetSearch = () => {
+    setSearchTerm('');
+    setShowDropdown(false);
+    setIsSearchOpen(false);
+  };
+
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
   };
@@ -19,13 +25,12 @@ export default function Navbar() {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setIsSearchOpen(false);
         setShowDropdown(false); // Fermer le menu déroulant
+        resetSearch(); // Réinitialiser la recherche
       }
     }
 
-    // Ajouter l'écouteur d'événement quand le composant est monté
     document.addEventListener('mousedown', handleClickOutside);
 
-    // Supprimer l'écouteur d'événement quand le composant est démonté
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -34,7 +39,8 @@ export default function Navbar() {
   useEffect(() => {
     const results = articleList.filter(article =>
       article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      article.summary.toLowerCase().includes(searchTerm.toLowerCase())
+      article.summary.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      article.tags.join(', ').toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredArticles(results);
   }, [searchTerm]);
@@ -69,7 +75,7 @@ export default function Navbar() {
           {showDropdown && (
             <div className="searchDropdown">
               {filteredArticles.map(article => (
-                <Link key={article.slug} href={`/articles/${article.slug}`} onClick={() => setShowDropdown(false)}>
+                <Link key={article.slug} href={`/articles/${article.slug}`} onClick={resetSearch}>
                     <div>
                       <h4>{article.title}</h4>
                     </div>

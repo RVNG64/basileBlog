@@ -29,7 +29,7 @@ export default function QuiEstBasile() {
         <BackButton />
 
         <div className="Basile__articleHeader">
-          <img src="https://res.cloudinary.com/dvzsvgucq/image/upload/v1688319003/0_3_z69gcb.png" alt="who is Basile?" className="Basile__articleImage" />
+          <img src="https://res.cloudinary.com/dvzsvgucq/image/upload/v1688319003/0_3_z69gcb.png" alt="who is Basile?" className="Basile__articleImage imgArticle1" />
         </div>
 
         <div className="Basile__articleContent">

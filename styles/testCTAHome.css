@@ -30,3 +30,32 @@
   text-align: right;
   padding-right: 4rem;
 }
+
+@media (max-width: 768px) {
+  .cta-home-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-home-text {
+    padding-left: 2rem;
+    text-align: center;
+    flex: auto;
+  }
+
+  .cta-home-button {
+    padding-right: 2rem;
+    text-align: center;
+    flex: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-home-text {
+    padding-left: 1rem;
+  }
+
+  .cta-home-button {
+    padding-right: 1rem;
+  }
+}

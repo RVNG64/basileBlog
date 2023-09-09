@@ -13,6 +13,7 @@ import '../styles/footer.css';
 import '../styles/newsletterSignup.css';
 import '../styles/articles/articlesCss.css';
 import '../styles/articles/suggestedArticles.css';
+import '../styles/goUpComponent.css';
 
 function MyApp({ Component, pageProps }) {
   return (

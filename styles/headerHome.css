@@ -6,7 +6,7 @@
   padding: 2rem 4rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   margin: auto;
-  height: 70vh;
+  height: 50vh;
 }
 
 .header__text-container {
@@ -109,6 +109,7 @@
 @media (max-width: 480px) {
   .header-home-container {
     padding: 1rem;
+    height: 70vh;
   }
 
   .header__main-title {

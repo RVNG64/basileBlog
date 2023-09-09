@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import TestCTAHome from '../components/TestCTAHome';
 import NewsletterSignup from '../components/NewsletterSignup';
 import Footer from '../components/Footer';
+import Script from 'next/script';
 import '../styles/globals.css';
 import '../styles/Navbar.css';
 import '../styles/headerHome.css';
@@ -42,7 +43,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content="Blog de Basile, 1er simulateur de création d'entreprise au monde. Des conseils, interviews et décryptages, par et pour les entrepreneurs." />
         <meta name="twitter:image" content="https://res.cloudinary.com/dvzsvgucq/image/upload/v1688319003/0_3_z69gcb.png" />
 
-        <script dangerouslySetInnerHTML={{__html:`
+        <Script dangerouslySetInnerHTML={{__html:`
                       (function(h,o,t,j,a,r){
                         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
                         h._hjSettings={hjid:3640439,hjsv:6};

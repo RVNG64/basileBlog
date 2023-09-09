@@ -1,3 +1,4 @@
+/*
 const mongoose = require('mongoose');
 
 const articleSchema = new mongoose.Schema({
@@ -51,3 +52,4 @@ articleSchema.pre('save', function (next) {
 const Article = mongoose.models.Article || mongoose.model('Article', articleSchema);
 
 module.exports = Article;
+*/

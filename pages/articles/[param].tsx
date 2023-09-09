@@ -53,7 +53,7 @@ export default function Article({ article }) {
     <div>
       <div>
         <h1>{article.title}</h1>
-        <p>{article.content}</p>
+        <p>{article.summary}</p>
         <p>Auteur : {article.author}</p>
         <p>Créé le {new Date(article.createdAt).toLocaleDateString('fr-FR')}</p>
         <p>Tags : {article.tags}</p>

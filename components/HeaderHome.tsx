@@ -6,8 +6,8 @@ export default function HeaderHome() {
     <div>
       <div className="header-home-container">
         <div className="header__text-container">
-          <h1 className="header__main-title">Faîtes-vous accompagner par l'expérience de milliers d'entrepreneurs avec Basile</h1>
-          <h3 className="header__sub-title">La toute première IA qui vous accompagne dans votre projet de création d'entreprise</h3>
+          <h1 className="header__main-title">Blog de Basile, le premier simulateur IA de création d'entreprise</h1>
+          <h3 className="header__sub-title">L'expérience de milliers d'entrepreneurs réunis en Basile.</h3>
           <h3 className="header__sub-title">Il n'a jamais été aussi simple de se lancer !</h3>
         </div>
         <div className="header__image-container">

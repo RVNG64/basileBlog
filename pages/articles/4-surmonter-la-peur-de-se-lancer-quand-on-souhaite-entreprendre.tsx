@@ -127,7 +127,7 @@ export default function MiroirArtBonnesQuestions() {
             <br />
             Les objectifs SMART (Spécifiques, Mesurables, Atteignables, Réalistes et Temporellement définis) vous aideront à rester focalisé et à mesurer vos progrès, réduisant ainsi l'anxiété liée à l'inconnu. Mais nous reviendrons sur cette notion dans un prochain article.
           </p>
-          <img src="https://res.cloudinary.com/dvzsvgucq/image/upload/v1693844553/hervemake_A_determined_startup_founder_reaching_out_to_their_pe_c85c8cc9-f795-4e14-9f0f-0b27628774f0_vbidxq.png" alt="Introspection the art of asking yourself the right questions" className="Basile__articleImage-content" />
+          <img src="https://res.cloudinary.com/dvzsvgucq/image/upload/v1693844554/0_1_6_h4ppud.png" alt="Introspection the art of asking yourself the right questions" className="Basile__articleImage-content" />
           <h3 className='Basile__articleInsideTitle'>
             L'importance du mentorat
           </h3>

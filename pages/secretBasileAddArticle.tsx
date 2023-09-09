@@ -1,3 +1,4 @@
+/*
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
@@ -76,3 +77,4 @@ export default function SecretBasileAddArticle() {
     </div>
   );
 }
+*/

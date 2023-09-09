@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#ffffff" />
         <meta name="keywords" content="blog, basile, simulateur, création, entreprise, conseils, interviews, décryptages, entrepreneurs, podcast, IA, intelligence, artificielle, entrepreneur, entrepreneuriat" />
         <meta name="author" content="Basile" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="canonical" href="https://www.hellobasile.com/" />
         <link rel="icon" href="/favicon.ico" />

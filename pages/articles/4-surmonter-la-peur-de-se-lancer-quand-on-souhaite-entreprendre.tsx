@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ShareArticle from '../../components/articles/ShareArticle';
 import BackButton from '../../components/articles/BackButton';
 import SuggestedArticles from '../../components/articles/SuggestedArticles';
+import GoUpComponent from '../../components/GoUpComponent';
 import { articleList } from '../../components/articles/articleList';
 import styles from '../../../styles/articles/articlesCss.module.css';
 
@@ -167,6 +168,7 @@ export default function MiroirArtBonnesQuestions() {
           {isModalOpen && <ShareArticle closeModal={closeModal} isModalOpen={isModalOpen} modalRef={modalRef} />}
         </div>
       </div>
+      <GoUpComponent />
       <SuggestedArticles currentArticle={currentArticle} allArticles={articleList} />
     </div>
   );

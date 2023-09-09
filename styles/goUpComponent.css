@@ -1,0 +1,74 @@
+.goUpComponentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F4F4F4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 1rem;
+  margin: 0 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.goUpComponentContainer:hover {
+  background-color: #E9E9E9;
+}
+
+.goUpComponent__backToList, .goUpComponent__goUpButtonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.goUpComponent__backToListButton, .goUpComponent__goUpButtonLink {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.goUpComponent__backToListButton:hover, .goUpComponent__goUpButtonLink:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.goUpComponent__backToListLink, .goUpComponent__goUpButtonLink {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.goUpComponent__goUpButtonLink {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .goUpComponentContainer {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .goUpComponent__backToList, .goUpComponent__goUpButtonContainer {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .goUpComponentContainer {
+    padding: 0.5rem;
+    background-color: #F4F4F4;
+  }
+
+  .goUpComponent__backToListLink, .goUpComponent__goUpButtonLink {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .goUpComponent__goUpButtonLink {
+    font-size: 0.8rem;
+  }
+}

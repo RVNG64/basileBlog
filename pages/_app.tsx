@@ -41,17 +41,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:description" content="Blog de Basile, 1er simulateur de création d'entreprise au monde. Des conseils, interviews et décryptages, par et pour les entrepreneurs." />
         <meta name="twitter:image" content="https://res.cloudinary.com/dvzsvgucq/image/upload/v1688319003/0_3_z69gcb.png" />
 
-        <Script dangerouslySetInnerHTML={{__html:`
-                      (function(h,o,t,j,a,r){
-                        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                        h._hjSettings={hjid:3640439,hjsv:6};
-                        a=o.getElementsByTagName('head')[0];
-                        r=o.createElement('script');r.async=1;
-                        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                        a.appendChild(r);
-                    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-          `}}
-        />
       </Head>
       <Navbar />
       <Component {...pageProps} />

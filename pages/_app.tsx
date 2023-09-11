@@ -1,5 +1,5 @@
 import React from 'react';
-import { hotjar } from 'react-hotjar';
+const hotjar = require('react-hotjar').default;
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';

@@ -1,4 +1,6 @@
 import React from 'react';
+import { hotjar } from 'react-hotjar';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import TestCTAHome from '../components/TestCTAHome';
@@ -17,6 +19,11 @@ import '../styles/articles/suggestedArticles.css';
 import '../styles/goUpComponent.css';
 
 function MyApp({ Component, pageProps }) {
+
+  useEffect(() => {
+    hotjar.initialize(3640439, 6);
+  }, []);
+
   return (
     <div>
       <Head>
